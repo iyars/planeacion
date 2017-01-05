@@ -1,0 +1,64 @@
+<section>
+    <div class="page-header">
+        <h1>
+            <i class="md md-insert-chart"></i> Agregar fase
+        </h1>
+    </div>
+    <h4 class="p-l-30">Proyecto: Evaluación de la Oferta Educativa: Preescolar</h4>
+    <div class=" col-md- 8 text-right ">
+        <label>Clave del proyecto (autoasignada): PSIPSCO0001</label>
+    </div>
+    <div class="col-md-12 ">
+        <div class="col-md-3">
+            <div class="well white">
+                <form>
+                    <fieldset>
+                        <div class="form-group filled">
+                            <label>Fecha de inicio</label>
+                            <input type="text" class="form-control text-center" ng-model="sharedDate" data-autoclose="1" bs-datepicker>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha de término</label>
+                            <input type="text" class="form-control text-center" ng-model="sharedDate" data-autoclose="1" bs-datepicker>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre de la fase</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <br>
+                        <div class="form-group pull-right">
+                            <input type="submit" class="btn btn-default" ng-click="re.limpiar()" value="Limpiar">
+                            <input type="submit" class="btn btn-primary" value="Agregar">
+                            <input type="submit" class="btn btn-primary" value="Agregar" ng-show="re.carreraGenerica != null && re.aniosConcluidos != null && re.nivelMaximo !=null && carrera2 != null " ng-click="re.agregarEstudios()">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="well white">
+                <div class="datatables">
+                    <table class="table table-full table-full-small" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Fecha de inicio</th>
+                                <th class="text-center">Fecha de término</th>
+                                <th class="text-center">Nombre de la fase</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="expList in re.estudiosLista">
+                                <td class="text-center">{{expList.nivelEstudio}}</td>
+                                <td class="text-center">{{expList.carrera}}</td>
+                                <td class="text-center">{{expList.anios}}</td>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-group p-t-20 text-right" ng-cloak>
+                    <button type="submit" class="btn btn-primary" ng-click="re.guardar()">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

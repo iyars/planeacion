@@ -1,0 +1,134 @@
+<section class="p-b-20">
+    <div class="page-header">
+        <h1><i class="md md-done-all"></i> Proyectos anuales</h1>
+        <p class="lead">Busqueda y selección de aspirantes</p>
+    </div>
+    <div class="row m-b-40">
+        <div class="col-md-3">
+            <div class="well white">
+                <form class="form-floating ng-pristine ng-valid">
+                    <fieldset>
+                        <legend>Listado anual de proyectos</legend>
+                        <div class="form-group filled">
+                            <label class="control-label">Selecciona el año</label>
+                            <select class="form-control">
+                                <option value="0">Selecciona</option>
+                                <option value="1">2017</option>
+                                <option value="2">2016</option>
+                                <option value="3">2015</option>
+                            </select>
+                        </div>
+                        <div class="form-group filled">
+                            <label class="control-label normal">Operativo</label>
+                            <select class="form-control">
+                                <option value="">Selecciona</option>
+                                <option value="">PLANEA2017</option>
+                                <option value="">EVOE2017</option>
+                            </select>
+                        </div>
+                        <div class="form-group filled">
+                            <label class="control-label">Caracter de estudio</label>
+                            <select class="form-control">
+                                <option value="0">Selecciona</option>
+                                <option value="1">Caracter 1</option>
+                                <option value="2">Caracter 2</option>
+                                <option value="3">Caracter 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group filled">
+                            <label class="control-label">Tipo de proyecto</label>
+                            <select class="form-control">
+                                <option value="0">Selecciona</option>
+                                <option value="1">Tipo 1</option>
+                                <option value="2">Tipo 2</option>
+                                <option value="3">Tipo 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group filled">
+                            <label class="control-label">Situación</label>
+                            <select class="form-control">
+                                <option value="0">Selecciona</option>
+                                <option value="1">Situación 1</option>
+                                <option value="2">Situación 2</option>
+                                <option value="3">Situación 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default">Limpiar</button>
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="well white">
+                <div class="card-action clearfix p-b-15">
+                    <div class="pull-right">
+                        <button class="btn btn-sm btn-border btn-info"> <i class="fa fa-bar-chart " aria-hidden="true"></i></button>
+                        <button class="btn btn-sm btn-border btn-success"> <i class="md md-print "></i></button>
+                        <button class="btn btn-sm btn-border btn-excel"> <i class="fa fa-file-excel-o "></i></button>
+                        <button class="btn btn-sm btn-border btn-word"> <i class="fa fa-file-word-o "></i></button>
+                        <button class="btn btn-sm btn-border btn-pdf"> <i class="fa fa-file-pdf-o "></i></button>
+                    </div>
+                </div>
+                <table class="table table-hover table-full table-full-small">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Programa</th>
+                            <th class="text-center">Descripcion</th>
+                            <th class="text-center">Proyecto
+                                <br/>Inicio/Término</th>
+                            <th class="text-center">Aplicación
+                                <br/>Inicio/Término</th>
+                            <th class="text-center">Caracter de estudio</th>
+                            <th class="text-center">Tipo de Proyecto</th>
+                            <th class="text-center">Situacion</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">Nombre programa</td>
+                            <td>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</td>
+                            <td class="text-center"><small>11/22/33 - 44/55/66</small></td>
+                            <td class="text-center"><small>11/22/33 - 44/55/66</small></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center">
+                                <button class="btn btn-success btn-sm" data-placement="bottom" data-title="Editar programa" bs-tooltip="" type="button" ui-sref="app.proyectos-modifica({typeProject: result.descTipoProyecto, projectId: result.idTipoProyecto, TipoProyecto: result.idTipoProyecto})"> <i class="md md-border-color"></i>
+                                </button>
+                                <button class="btn btn-danger btn-sm" data-placement="bottom" data-title="Eliminar programa" bs-tooltip="" ng-click='projectList.deleteProject(result.idProyecto)'><i class="md md-delete"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card-action clearfix">
+                    <ul class="pager">
+                        <li>
+                            <button class="btn btn-default btn-flat-border pull-left grey lighten-2" type="button" ng-disabled="projectList.currentPage == 0" ng-click="projectList.currentPage = projectList.currentPage - 1">Anterior</button>
+                            <button class="btn btn-default btn-flat-border pull-right grey lighten-2" type="button" ng-disabled="projectList.currentPage >= projectList.projectsList.length/projectList.pageSize - 1" ng-click="projectList.currentPage = projectList.currentPage + 1"> Siguiente</button>
+                        </li>
+                        <li>
+                            <div class="col-md-3 col-md-push-2 col-xs-3 col-xs-push-2 col-lg-push-3 text-center">
+                                <div class="col-sm-6 text-right">
+                                    <input type="number" class="form-control" min="1" max="50" />
+                                </div>
+                                <div class="col-sm-6 text-left">
+                                    <span class="pager-number">de 50</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-action clearfix p-t-15">
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-border btn-success" data-animation="am-fade-and-slide-top" data-template-url="app/listado/modal-cargar.html" bs-modal="modal">Cargar con Excel</button>
+                        <button type="submit" class="btn btn-primary" data-animation="am-fade-and-slide-top" data-template-url="app/listado/modal-agregar.html" bs-modal="modal">Agregar proyecto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

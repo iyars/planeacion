@@ -1,0 +1,59 @@
+<div class="main-content" ng-controller="MuestraController as itemMuestra">
+<section>
+	<div class="page-header">
+		<h1>
+      <i class="md md-insert-chart"></i> Cargar muestra 
+    </h1>
+	</div>
+	<div class="well white">
+		<div class="row p-l-40"> 
+  		<h4>Proyecto: Evaluación de la Oferta Educativa: Preescolar</h4>
+  		<br><br>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <table class="table table-bordered table-full table-full-small text-center">
+            <tbody>
+                <tr class="well">
+                <td></td>
+                  <td>Nombre de archivo</td>
+                  <td>Acción</td>
+                </tr> 
+                <tr class="text-center">
+                  <td>
+                      <i class="md md-archive f30" type="button" data-toggle="modal" data-target="#gridCargaExcel"></i>
+                  </td>
+                  <td></td>
+                  <td>
+                     <button class="btn btn-primary btn-xs">Seleccionar campos</button> 
+                     <button class="btn btn-danger btn-xs m-l-20"><i class=" md md-delete  "></i></button> 
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+	  </div>
+  </div>
+</section>	
+</div>
+
+<!-- Cargar excel -->
+<div id="gridCargaExcel" class="modal fade" my-modal aria-labelledby="gridModalLabel" ng-init="" ng-controller="MuestraController as muestrctrl">
+<section>
+    <div class="modal-dialog" >
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="gridModalLabel">Cargar excel</h4>
+          </div>
+            <div class="modal-body">
+               <input type="file" class="text-left" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" file-model="muestrctrl.archivoExcel">
+               <button ng-click="muestrctrl.subirExcel()" class="btn btn-success boton">Cargar</button>
+               {{muestrctrl.archivoExcel}}
+            </div>
+            <!--div class="modal-footer">
+            </div-->
+        </div>
+    </div>
+</section>
+</div>

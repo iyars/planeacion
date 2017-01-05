@@ -1,0 +1,295 @@
+<div class="main-content" ng-init="itemproject.init()" ng-controller="ProyectoItemController as itemproject">
+<section>
+     <div class="page-header">
+        <h1>
+            <i class="md md-insert-chart"></i> Ficha básica
+        </h1>
+    </div>
+    <div class="forms-advanced row m-b-20" id="datepickers">
+        <div class=" col-md- 12 text-right">
+             <label>Clave del proyecto (autoasignada): PSIPSCO0001</label>
+        </div>
+    </div>
+    <div class="row well white">
+        <div class="row">
+            <div class="col-md-10">
+                <span>Nombre del proyecto</span>
+                <span><input type="text" size="85" name="nombreProyecto" ng-minlength="1" ng-maxlength="60" ng-model="itemproject.datos.nombreProyecto" required></span>
+                <p ng-show="proyectoItem.nombreProyecto.$error.minlength">La longitud minima es 1 </p>
+                <p ng-show="proyectoItem.nombreProyecto.$error.maxlength">La longitud máxima es 60 </p>
+                <p ng-show="proyectoItem.nombreProyecto.$error.required">Campo requerido</p>
+        </div>
+            <div class="col-md-2">
+                <span>Abreviatura</span>
+                 <span>
+                    <select class="form-control">
+                        <option value="" >-Seleccionar-</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 p-t-20">
+                <div class="form-group">
+                    <label for="textArea" class="control-label">Descripción del proyecto</label>
+                    <textarea class="form-control vertical" name="descripcionProyecto" rows="2" id="textArea" ng-model="itemproject.datos.descripcionProyecto"  required></textarea>
+                    <p ng-show="proyectoItem.descripcionProyecto.$error.required">Campo     requerido</p>             
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row well white">
+        <div class="row">
+            <div class="col-md-6">
+                <span>Cáracter de estudio</span>
+                <span>
+                    <select class="form-control" 
+                          ng-model="itemproject.datos.idCaracterEstudio" ng-options="item.idCaracterEstudio as item.descCarest for item in itemproject.catalogos.listCaracterEstudio" required>
+                       <option value="" >-Seleccionar-</option>
+                    </select>
+                </span>    
+            </div>
+            <div class="col-md-3">
+                <span>Número de muestras</span>
+                <p><input type="number" class="" name="numMuestras" ng-minlength="1" ng-maxlength="2" ng-model="itemproject.datos.numMuestras"   style="width:200px;height:37px" required></p>
+                <p ng-show="proyectoItem.numMuestras.$error.minlength">La longitud minima es 1 </p>
+                <p ng-show="proyectoItem.numMuestras.$error.maxlength">La longitud máxima es 2 </p>   
+            </div>
+            <div class="col-md-3">
+                <label for="">Situación</label>
+                <span>
+                    <select class="form-control" 
+                          ng-model="itemproject.datos.idCaracterEstudio" ng-options="item.idCaracterEstudio as item.descCarest for item in itemproject.catalogos.listCaracterEstudio" required>
+                       <option value="" >-Seleccionar-</option>
+                   </select> 
+                </span>    
+            </div>
+        </div>
+        <div class="row p-t-20">
+            <div class="col-md-6 ">
+                <label class="control-label control-col">Dirección general responsable</label>
+                <select class="form-control" 
+                    ng-model="itemproject.datos.idDgResp" 
+                    ng-options="item.idDgResp as item.descDgresp for item in itemproject.catalogos.listDgResp" required>
+                <option value="" >-Seleccionar-</option>
+                <!--option ng-repeat="elem in itemproject.catalogos.listDgResp" value="{{elem.idDgResp}}">{{elem.descDgresp}}</option-->
+                </select>
+                <!--pre>{{itemproject.catalogos.listDgResp.idDgResp.d}}</pre-->
+                <pre>{{itemproject.datos.listDgResp.descDgresp}}</pre>
+            </div>
+            <div class="col-md-6 ">
+                <label class="control-label control-col">Dirección de área responsable</label>
+                <select class="form-control"
+                name="direccionResp" 
+                ng-model="itemproject.datos.idAreaResp" 
+                ng-options="item.idAreaResp as item.descArearesp for item in itemproject.catalogos.listAreaResp" required>
+                <option value="" >-Seleccionar-</option>
+                </select>
+            </div>
+        </div>
+     </div>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="row well white">
+                <h3>Fechas del Proyecto</h3>
+                <div class="col-md-6">
+                    <label for="">Fecha de inicio: </label>
+                    <p><input type="date" class="" name="fecInicioProyecto" style="width:100px;height:30px" type="text" id="datetimepicker1" ng-model="itemproject.datos.fecInicioProyecto" required></p>  
+                    <p ng-show="proyectoItem.fecInicioProyecto.$error.required">Campo requerido</p>  
+                </div>
+                <div class="col-md-6">
+                    <label for="">Fecha de término: </label>
+                    <p><input type="date" class="" name="fecFinProyecto" style="width:120px;height:30px" type="text" id="datetimepicker2" ng-model="itemproject.datos.fecFinProyecto" required></p>
+                    <p ng-show="proyectoItem.fecFinProyecto.$error.required">Campo requerido</p> 
+                </div> 
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+           <div class="row well white">
+                <h3 for="">Fecha de aplicación</h3>
+                <div class="col-md-4">
+                    <label for="">Fecha de inicio: </label>
+                    <p><input type="date" class="" name="fecInicioAplicacion" style="width:120px;height:30px" type="text" id="datetimepicker3" ng-model="itemproject.datos.fecInicioAplicacion" required></p>   
+                    <p ng-show="proyectoItem.fecInicioAplicacion.$error.required">Campo requerido</p>  
+                </div>
+                <div class="col-md-4">
+                    <label for="">Fecha de término: </label>
+                    <p><input type="date" class="" name="fecFinAplicacion" style="width:120px;height:30px" type="date" id="datetimepicker3" ng-model="itemproject.datos.fecFinAplicacion" required></p>
+                    <p ng-show="proyectoItem.fecFinAplicacion.$error.required">Campo requerido</p>    
+                </div>
+                <div class="col-md-4">
+                    <label for="">Días: </label>
+                    <p><input type="number" style= "width:100px;height:30px" class="" name="diasProyecto"  ng-minlength="1" ng-maxlength="2" ng-model="itemproject.datos.diasProyecto" required></p>
+                    <p ng-show="proyectoItem.diasProyecto.$error.minlength">La longitud minima es 1 </p>
+                    <p ng-show="proyectoItem.diasProyecto.$error.maxlength">La longitud máxima es 2 </p>
+                    <p ng-show="proyectoItem.diasProyecto.$error.required">Campo requerido</p>     
+                </div> 
+            </div>  
+        </div>
+    </div>
+    <div class="row well white">
+        <div class="col-md-8 col-lg-4 filled p-l-40">
+            <div class="radio-inline">
+                <label class="filled" for="evaluacion">
+                <input name="idTipoProyecto" id="evaluacion" value="1" type="radio" ng-model="itemproject.datos.idTipoProyecto"> Evaluación </label>
+            </div>
+            <div class="radio-inline">
+                <label class="filled" for="encuesta">
+                <input name="idTipoProyecto" id="encuesta" value="2" type="radio" ng-model="itemproject.datos.idTipoProyecto"> Encuesta </label>
+            </div>
+        </div>
+        <div class="col-md-8" ng-show="itemproject.datos.idTipoProyecto =='1'">
+            <span class="control-label control-col">Unidad de Observación</span>
+            <select class="form-control" 
+            ng-model="itemproject.datos.idUniobs" ng-options="item.idUniobs as item.descUniseg for item in itemproject.catalogos.listUnidadesObservacion" required>
+            <option value="" >-Seleccionar-</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-success boton" data-toggle="modal" data-target="#gridSystemModal" ng-show="itemproject.datos.idTipoProyecto == '2'" required>
+                Configurar encuesta
+            </button>
+        </div>
+    </div>
+    <div class="row well white">
+             <div class="form-group">
+                <label for="textArea" class="control-label control-col normal">Comentarios</label>
+                <textarea class="form-control vertical" rows="1" id="textArea" ng-model="itemproject.datos.comentarios"></textarea>
+            </div>
+            <div class="form-group pull-right">
+                <button type="submit" class="btn btn-success boton" href="">Crear</button>
+                <button type="reset" class="btn btn-default">Cancelar</button>
+            </div>
+     </div>       
+ 
+</section>
+    
+</div>
+
+<!-- Modal configurar encuesta -->
+<div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true"ng-init="itemproject.init()" ng-controller="ProyectoItemController as itemproject">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridModalLabel">Configuracion de encuesta</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-floating" name="surveyForm">
+                    <fieldset>
+                        <legend class="lead">Clave del proyecto (autoasignada): PSIPSCO0001</legend>
+                        <div class="form-group filled">
+                            <div class="row p-t-20">
+                                <div class="col-md-6 ">
+                                    <label class="control-label control-col normal">Población objetivo</label>
+                                    <select class="form-control"
+                                    class="form-control" ng-model="itemproject.datos.listPoblaciones" 
+                                    ng-options="item as item.descPoblacion for item in itemproject.catalogos.listPoblaciones">
+                                    <option value="" >-Seleccionar-</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <label class="control-label control-col">Nivel educativo</label>
+                                    <select class="form-control" 
+                                    ng-model="itemproject.datos.listNivelesEdu" 
+                                    ng-disable="!itemproject.datos.listNivelesEdu" 
+                                    ng-options="item as item.descNiveledu for item in itemproject.catalogos.listNivelesEdu">
+                                        <option value="0" >Seleccionar</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group filled">
+                            <div class="row p-t-20">
+                                <div class="col-md-6 ">
+                                    <label class="control-label control-col normal">Grado/Semestre</label>
+                                    <select class="form-control">
+                                        <option value="0">Seleccionar</option>
+                                        <option value="1">Grado/Semestre 1</option>
+                                        <option value="2">Grado/Semestre 2</option>
+                                        <option value="3">Grado/Semestre 3</option>
+                                        <option value="4">Grado/Semestre 4</option>
+                                        <option value="5">Grado/Semestre 5</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <label class="control-label control-col">Asignatura</label>
+                                    <select class="form-control">
+                                        <option value="0">Seleccionar</option>
+                                        <option value="1">Asignatura 1</option>
+                                        <option value="2">Asignatura 2</option>
+                                        <option value="3">Asignatura 3</option>
+                                        <option value="4">Asignatura 4</option>
+                                        <option value="5">Asignatura 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group pull-right">
+            
+                            <button type="submit" class="btn btn-success boton" href="">Agregar</button>
+
+                        </div>
+                    </fieldset>
+                </form>
+                            <div class="datatables">
+                                <table datatable="" class="table table-full table-full-small" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Población objetivo</th>
+                                            <th>Nivel educativo</th>
+                                            <th>Grado/Semestre</th>
+                                            <th>Asignatura</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Población objetivo 1</td>
+                                            <td>Nivel educativo 1</td>
+                                            <td>Grado/Semestre 1</td>
+                                            <td>Asignatura 1</td>
+                                            <td><button type="button" class="btn btn-xs btn-danger btn-round"><i class="md md-delete"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Población objetivo 2</td>
+                                            <td>Nivel educativo 2</td>
+                                            <td>Grado/Semestre 2</td>
+                                            <td>Asignatura 2</td>
+                                            <td><button type="button" class="btn btn-xs btn-danger btn-round"><i class="md md-delete"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Población objetivo 3</td>
+                                            <td>Nivel educativo 3</td>
+                                            <td>Grado/Semestre 3</td>
+                                            <td>Asignatura 3</td>
+                                            <td><button type="button" class="btn btn-xs btn-danger btn-round"><i class="md md-delete"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Población objetivo 4</td>
+                                            <td>Nivel educativo 4</td>
+                                            <td>Grado/Semestre 4</td>
+                                            <td>Asignatura 4</td>
+                                            <td><button type="button" class="btn btn-xs btn-danger btn-round"><i class="md md-delete"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Población objetivo 5</td>
+                                            <td>Nivel educativo 5</td>
+                                            <td>Grado/Semestre 5</td>
+                                            <td>Asignatura 5</td>
+                                            <td><button type="button" class="btn btn-xs btn-danger btn-round"><i class="md md-delete"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-success boton" href="">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

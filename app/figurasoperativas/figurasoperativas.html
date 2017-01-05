@@ -1,0 +1,128 @@
+<div class="main-content" ng-init="figurasCtrl.init()" ng-controller="FigurasOpListaController as figurasCtrl">
+<section>
+    <div class="page-header">
+        <h1>
+            <i class="md md-insert-chart"></i> Figuras Operativas
+        </h1>
+    </div>
+    <div class="forms-advanced row ">
+        <div class=" col-md- 12 text-right">
+             <label>Clave del proyecto (autoasignada): PSIPSCO0001</label>
+        </div>
+    </div>  
+    <div class="row">
+        <div class="col-md-8">
+              <h4 class="p-l-20">Proyecto: Evaluación de la Oferta Educativa: Preescolar</h4>
+        </div>
+        <div class="col-md-4 text-right">
+            <h5>Muestra 1/3</h5> 
+        </div>
+    </div>
+    <div class="row m-b-40">
+      <div class="col-md-6 col-lg-4">
+          <div class="well white">
+              <div class="tab-content m-t-10">
+                  <div role="tabpanel" class="tab-pane active" ng-class="{active: actionTab==1}">
+                      <form class="form-floating ng-pristine ng-valid">
+                          <fieldset>
+                              <div  class="form-group filled col-md-12">
+                                 <label >Figuras operativas</label>
+                                  <select class="form-control" ng-model="figurasCtrl.datos.idnivel" ng-options="item.idNivelPerfil as item.idNivelPerfil for item in figurasCtrl.nivelesList" ng-change="figurasCtrl.asignaNivel(figurasList.idPerfil)">
+                                      <option value="" >-Seleccionar-</option>
+                                  </select>
+                              </div>
+                              <div class="form-group filled col-md-4">
+                                  <label >Nivel</label>
+                                  <select class="form-control" ng-model="figurasCtrl.datos.idnivel" ng-options="item.idNivelPerfil as item.idNivelPerfil for item in figurasCtrl.nivelesList" ng-change="figurasCtrl.asignaNivel(figurasList.idPerfil)">
+                                      <option value="" >-Seleccionar-</option>
+                                  </select>
+                              </div>
+                              <div class="form-group filled col-md-8">
+                                  <label >Tipo de contrato</label>
+                                  <select class="form-control" ng-model="figurasCtrl.datos.idContrato" ng-options="item.idTipoContrato as item.descTipoContrato for item in figurasCtrl.contratosList">
+                                      <option value="" >-Seleccionar-</option>
+                                  </select>
+                              </div>
+                                <div class="form-group filled col-md-6">
+                                <label>Inicio de contrato</label>
+                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="sharedDate" data-autoclose="1" bs-datepicker=""  type="text">
+                            </div>
+                                <div class="form-group filled col-md-6">
+                                <label>Fin de contrato</label>
+                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="sharedDate" data-autoclose="1" bs-datepicker="" value="Bibendum enim, facilisis gravida neque convallis a cras semper auctor neque, vitae tempus quam pellentesque nec nam." type="text">
+                            </div>
+                                <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#gridCargaPdf">Cargar Perfil</button>
+                              <div class="p-t-40 text-right">
+                                  <button type="submit" class="btn btn-default">Limpiar</button>
+                                  <button type="submit" class="btn btn-primary">Agregar</button>
+                              </div>
+                          </fieldset>
+                      </form>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-8">
+            <div class="well white">
+                <table class="table table-hover table-full table-full-small">
+                    <thead class="">
+                        <tr class="">
+                            <th class="text-center">Jerarquía</th>
+                            <th >Figuras operativas</th>
+                            <th class="text-center">Nivel</th>
+                            <th class="text-center">Tipo de contrato</th>
+                            <th class="text-center">Inicio de contrato</th>
+                            <th class="text-center">Fin de contrato</th>
+                            <th class="text-center">Perfil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                          <td class="text-center"></td>
+                          <td> </td>
+                          <td class="text-center"></td>
+                          <td class="text-center"></td>
+                          <td class="text-center"></td>
+                          <td class="text-center"></td>
+                          <td class="text-center"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-action clearfix">
+                <div class="pull-right">
+                    <a href="#/vacantes/vacantes-configurar-entrevista-resumen">
+                        <button type="submit" class="btn btn-primary">Siguiente</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- Cargar PDF -->
+<!--div id="gridCargaPdf" class="modal fade"  my-modal aria-labelledby="gridModalLabel" ng-init="perfilPDF.init()" ng-controller="FigurasOpListaController as perfilPDF"-->
+<div id="gridCargaPdf" class="modal fade"  my-modal aria-labelledby="gridModalLabel">
+<section>
+    <div class="modal-dialog" >
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="gridModalLabel">Cargar Perfil</h4>
+          </div>
+          <div class="modal-body">
+            <input type="file" name="file" class="text-left" accept="application/pdf" file-model="figurasCtrl.archivoExcel" ng-model="figurasCtrl.archivoExcel">
+          </div>
+                         {{figurasCtrl.archivoExcel.name}}
+          <div class="modal-footer">
+              <button ng-click="figurasCtrl.subirExcel()" class="btn btn-success boton">Cargar</button>
+          </div>
+        </div>
+      </div>
+</section>
+</div>
+
+      
+                
+          
+           

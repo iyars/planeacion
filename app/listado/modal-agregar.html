@@ -1,0 +1,74 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-floating">
+                <div class="modal-header">
+                    <h4 class="modal-title">Agregar proyecto</h4>
+                </div>
+                <div class="modal-body">
+                    <fieldset>
+                        <div class="form-group filled">
+                            <label class="control-label normal">Nombre del proyecto</label>
+                            <select class="form-control">
+                                <option value="">Selecciona</option>
+                                <option value="">Nombre 1</option>
+                                <option value="">Nombre 2</option>
+                            </select>
+                        </div>
+                        <p class="lead"><strong>ABREVIATURA: ABC12</strong></p>
+                        <div class="form-group">
+                            <label for="textArea" class="control-label">Descripción</label>
+                            <textarea class="form-control vertical" rows="3" id="textArea"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1"><i class="md md-event-available"></i></span>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input class="form-control ng-pristine ng-valid ng-empty ng-touched" ng-model="fromDate" data-max-date="" placeholder="Fecha de inicio" bs-datepicker="" value="Sit amet, porttitor eget dolor morbi non arcu risus, quis." style="" type="text">
+                                    </div>
+                                    <div class="col-md-6 filled">
+                                        <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="untilDate" data-min-date="" placeholder="Fecha de término" bs-datepicker="" value="At varius vel, pharetra vel turpis nunc." type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>Tipo de proyecto</p>
+                            <div class="radio-inline">
+                                <label class="filled">
+                                    <input name="optionsRadios" id="optionsRadios1" value="option1" checked="" type="radio"> Evaluación
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label class="filled">
+                                    <input name="optionsRadios" id="optionsRadios1" value="option1" checked="" type="radio"> Encuesta
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group filled">
+                            <label class="control-label normal">Caracter de estudio</label>
+                            <select class="form-control">
+                                <option value="">Selecciona</option>
+                                <option value="">Caracter 1</option>
+                                <option value="">Caracter 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group filled">
+                            <label class="control-label normal">Situación</label>
+                            <select class="form-control">
+                                <option value="">Selecciona</option>
+                                <option value="">Situación 1</option>
+                                <option value="">Situación 2</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="$hide()">Cerrar</button>
+                    <button type="button" class="btn btn-primary" ng-click="$hide()">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
