@@ -89,13 +89,13 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-center">Nombre programa</td>
+                            <td>Nombre programa</td>
                             <td>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</td>
                             <td class="text-center"><small>11/22/33 - 44/55/66</small></td>
                             <td class="text-center"><small>11/22/33 - 44/55/66</small></td>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
+                            <td class="text-center">Caracter</td>
+                            <td class="text-center">Tipo</td>
+                            <td class="text-center">Situación</td>
                             <td class="text-center">
                                 <button class="btn btn-success btn-sm" data-placement="bottom" data-title="Editar programa" bs-tooltip="" type="button" ui-sref="app.proyectos-modifica({typeProject: result.descTipoProyecto, projectId: result.idTipoProyecto, TipoProyecto: result.idTipoProyecto})"> <i class="md md-border-color"></i>
                                 </button>
@@ -111,14 +111,7 @@
                             <button class="btn btn-default btn-flat-border pull-right grey lighten-2" type="button" ng-disabled="projectList.currentPage >= projectList.projectsList.length/projectList.pageSize - 1" ng-click="projectList.currentPage = projectList.currentPage + 1"> Siguiente</button>
                         </li>
                         <li>
-                            <div class="col-md-3 col-md-push-2 col-xs-3 col-xs-push-2 col-lg-push-3 text-center">
-                                <div class="col-sm-6 text-right">
-                                    <input type="number" class="form-control" min="1" max="50" />
-                                </div>
-                                <div class="col-sm-6 text-left">
-                                    <span class="pager-number">de 50</span>
-                                </div>
-                            </div>
+                            <p class="pager-number">Mostrando del 1 al 10 de 50 resultados</p>
                         </li>
                     </ul>
                 </div>
