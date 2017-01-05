@@ -1,221 +1,194 @@
-<div class="main-content" ng-init="itemproject.init()" ng-controller="ProyectoItemUpdateController as itemproject">
 <section>
-     <div class="page-header">
-        <h1>
-            <i class="md md-insert-chart"></i> Editar evaluación
-        </h1>
+    <div class="page-header">
+        <h1><i class="md md-insert-chart"></i> Editar evaluación NOMBRE DEL PROYECTO (PROY01) </h1>
+        <p class="lead">Clave del proyecto: PSIPSCO0001</p>
     </div>
-    <div class="forms-advanced row ">
-        <div class=" col-md- 12 text-right">
-             <label>Clave del proyecto (autoasignada): PSIPSCO0001</label>
+    <div class="row m-b-40">
+        <div class="well white">
+            <form class="form-floating">
+                <fieldset>
+                    <legend>Descripción</legend>
+                    <div class="form-group filled">
+                        <label for="proyectoDescripcion" class="control-label normal">Agrega o edita el texto</label>
+                        <textarea class="form-control vertical " rows="3" id="proyectoDescripcion">Tristique senectus et netus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque habitant. Cras fermentum, odio eu feugiat pretium, nibh ipsum consequat nisl. Diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet, consectetur adipiscing.</textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <legend>Características</legend>
+                            <div class="row p-t-15">
+                                <div class="col-md-6">
+                                    <div class="form-group filled">
+                                        <label class="control-label normal">Caracter de estudio</label>
+                                        <select class="form-control">
+                                            <option value="">Selecciona</option>
+                                            <option value="">Caracter 1</option>
+                                            <option value="">Caracter 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group filled">
+                                        <label for="inputEmail" class="control-label normal">Número de muestras</label>
+                                        <input class="form-control" value="" type="number">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group filled">
+                                        <label class="control-label normal">Status</label>
+                                        <select class="form-control">
+                                            <option value="">Selecciona</option>
+                                            <option value="">Status 1</option>
+                                            <option value="">Status 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group filled">
+                                        <label class="control-label normal">Dirección general responsable</label>
+                                        <select class="form-control">
+                                            <option value="">Selecciona</option>
+                                            <option value="">Dirección g 1</option>
+                                            <option value="">Dirección g 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group filled">
+                                        <label class="control-label normal">Dirección de área responsable</label>
+                                        <select class="form-control">
+                                            <option value="">Selecciona</option>
+                                            <option value="">Dirección a 1</option>
+                                            <option value="">Dirección a 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group filled">
+                                        <label class="control-label normal">Unidad de Observación</label>
+                                        <select class="form-control">
+                                            <option value="">Selecciona</option>
+                                            <option value="">Unidad 1</option>
+                                            <option value="">Unidad 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <legend>Fechas del proyecto</legend>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="md md-event-available"></i></span>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" ng-model="fromDate" data-max-date="" placeholder="Fecha de inicio" bs-datepicker="" value="Sit amet, porttitor eget dolor morbi non arcu risus, quis." style="" type="text">
+                                        </div>
+                                        <div class="col-md-6 filled">
+                                            <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="untilDate" data-min-date="" placeholder="Fecha de término" bs-datepicker="" value="At varius vel, pharetra vel turpis nunc." type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <legend>Fechas del aplicación</legend>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="md md-event-available"></i></span>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" ng-model="fromDate" data-max-date="" placeholder="Fecha de inicio" bs-datepicker="" value="Sit amet, porttitor eget dolor morbi non arcu risus, quis." style="" type="text">
+                                        </div>
+                                        <div class="col-md-6 filled">
+                                            <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="untilDate" data-min-date="" placeholder="Fecha de término" bs-datepicker="" value="At varius vel, pharetra vel turpis nunc." type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group filled">
+                                    <label for="inputEmail" class="control-label normal">Número de muestras</label>
+                                    <input class="form-control" value="" type="number">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grey lighten-5 p-15">
+                        <legend>NOMBRE DE LA TABLA</legend>
+                        <div class="row p-t-15">
+                            <div class="col-md-3">
+                                <div class="form-group filled">
+                                    <label class="control-label normal">Población objetivo</label>
+                                    <select class="form-control">
+                                        <option value="">Elige</option>
+                                        <option value="">Población 1</option>
+                                        <option value="">Población 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group filled">
+                                    <label class="control-label normal">Nivel educativo</label>
+                                    <select class="form-control">
+                                        <option value="">Elige</option>
+                                        <option value="">Nivel 1</option>
+                                        <option value="">Nivel 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group filled">
+                                    <label class="control-label normal">Grado/Semestre</label>
+                                    <select class="form-control">
+                                        <option value="">Elige</option>
+                                        <option value="">Grado/Semestre 1</option>
+                                        <option value="">Grado/Semestre 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group filled">
+                                    <label class="control-label normal">Asignatura</label>
+                                    <select class="form-control">
+                                        <option value="">Elige</option>
+                                        <option value="">Asignatura 1</option>
+                                        <option value="">Asignatura 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-border btn-default" value="Limpiar">
+                                    <input type="submit" class="btn btn-border btn-success" value="Agregar">
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <table class="table table-full table-full-small table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Población objetivo</th>
+                                            <th>Nivel educativo</th>
+                                            <th>Grado/Semestre</th>
+                                            <th>Asignatura</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Población objetivo 1</td>
+                                            <td>Nivel educativo 1</td>
+                                            <td>Grado/Semestre 1</td>
+                                            <td>Asignatura 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-danger"><i class="md md-delete"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <legend>Comentario</legend>
+                    <div class="form-group filled">
+                        <label for="proyectoDescripcion" class="control-label normal">Agrega o edita el texto</label>
+                        <textarea class="form-control vertical " rows="3" id="proyectoDescripcion">Tristique senectus et netus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque habitant. Cras fermentum, odio eu feugiat pretium, nibh ipsum consequat nisl. Diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet, consectetur adipiscing.</textarea>
+                    </div>
+                    <div class="form-group pull-right">
+                        <button type="reset" class="btn btn-default">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </div>
-    <form action="" class="form-floating" name="proyectoItem" method="post" ng-submit="itemproject.submitProject($event, proyectoItem)" novalidate>
-      <fieldset>
-        <div class="row well white">
-            <div class="row">
-                <div class="col-md-10">
-                    <label for="">Nombre del proyecto</label>
-                    <p><input type="text" size="95" name="nombreProyecto" ng-minlength="1" ng-maxlength="60" ng-model="itemproject.proyecto.nombreProyecto" required></p>
-                </div>
-                <div class="col-md-2">
-                   <label for="abreviatura" name="abreviatura" >Abreviatura</label>
-                   <input name="abreviatura" type="text" size="17" ng-minlength="1" ng-maxlength="3" ng-model="itemproject.proyecto.abreviatura" required>
-                </div> 
-            </div>     
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="textArea" >Descripción del proyecto</label>
-                         <textarea class="form-control vertical" name="descripcionProyecto" rows="2" id="textArea" ng-model="itemproject.proyecto.descripcionProyecto"  required></textarea>
-                        <p ng-show="proyectoItem.descripcionProyecto.$error.required" style="color:red; font-size: 10px">Campo requerido</p>         
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row well white">
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="">Cáracter de estudio</label>
-                       <select class="form-control" 
-                              ng-model="itemproject.proyecto.idCaracterEstudio" ng-options="item.idCaracterEstudio as item.descCarest for item in itemproject.catalogos.listCaracterEstudio" required>
-                           <option value="" >-Seleccionar-</option>
-                       </select>
-                </div>
-                <div class="col-md-4 ">
-                  <label>Tipo de proyecto</label>
-                  <div class="row">
-                    <div class=" col-md-6 radio">
-                        <label class="filled" for="evaluacion">
-                            <input name="idTipoProyecto" id="evaluacion" value="1" type="radio" ng-model="itemproject.proyecto.idTipoProyecto"> Evaluacion </label>
-                    </div>
-                    <div class="col-md-6 radio p-t-15">
-                        <label class="filled" for="encuesta">
-                        <input name="idTipoProyecto" id="encuesta" value="2" type="radio" ng-model="itemproject.proyecto.idTipoProyecto"> Encuesta </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                    <label for="">Número de muestras</label>
-                    <p><input type="number" style="width:120px" name="numMuestras" ng-minlength="1" ng-maxlength="2" ng-model="itemproject.proyecto.numMuestras" required></p>
-                    <!--<p ng-show="proyectoItem.numMuestras.$error.minlength">La longitud minima es 1 </p>
-                    <p ng-show="proyectoItem.numMuestras.$error.maxlength">La longitud máxima es 2 </p>--> 
-                </div>
-                <div class="col-md-2">
-                    <label for="">Situación</label>
-                    <select class="form-control" 
-                          ng-model="itemproject.proyecto.idCaracterEstudio" ng-options="item.idCaracterEstudio as item.descCarest for item in itemproject.catalogos.listCaracterEstudio" required>
-                       <option value="" >-Seleccionar-</option>
-                    </select> 
-                </div>
-            </div>
-            <div class="row p-t-20">
-                <div class="col-md-6 ">
-                    <label >Dirección general responsable</label>
-                    <select class="form-control" 
-                        ng-model="itemproject.proyecto.idDgResp" 
-                        ng-options="item.idDgResp as item.descDgresp for item in itemproject.catalogos.listDgResp" required>
-                    <option value="" >-Seleccionar-</option>
-                    </select>
-                </div>
-                <div class="col-md-6 ">
-                    <label>Dirección de área responsable</label>
-                    <select class="form-control"
-                    name="direccionResp" 
-                    ng-model="itemproject.proyecto.idAreaResp" 
-                    ng-options="item.idAreaResp as item.descArearesp for item in itemproject.catalogos.listAreaResp" required>
-                    <option value="" >-Seleccionar-</option>
-                    </select>
-                </div>
-            </div>    
-        </div>
-            
-        <div class="row">
-            <div class="col-md-5">
-                <div class="row well white">
-                    <h3>Fechas del Proyecto</h3>
-                    <div class="col-md-6">
-                        <label for="">Fecha de inicio: </label>
-                        <p><input type="date" class="" name="fecInicioProyecto" style="width:100px;height:30px" type="text" id="datetimepicker1" ng-model="itemproject.proyecto.fecInicioProyecto" required></p>  
-                        <p ng-show="proyectoItem.fecInicioProyecto.$error.required" style="color:red; font-size: 10px">Campo requerido</p>  
-                    </div>
-                    <div class="col-md-6">
-                        <label for="">Fecha de término: </label>
-                        <p><input type="date" class="" name="fecFinProyecto" style="width:120px;height:30px" type="text" id="datetimepicker2" ng-model="itemproject.proyecto.fecFinProyecto" required></p>
-                        <p ng-show="proyectoItem.fecFinProyecto.$error.required" style="color:red; font-size: 10px">Campo requerido</p>    
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-6">
-                <div class="row well white">
-                    <h3 for="">Fecha de aplicación</h3>
-                    <div class="col-md-4">
-                        <label for="">Fecha de inicio: </label>
-                        <p><input type="date" class="" name="fecInicioAplicacion" style="width:120px;height:30px" type="text" id="datetimepicker3" ng-model="itemproject.´proyecto.fecInicioAplicacion" required></p>   
-                        <p ng-show="proyectoItem.fecInicioAplicacion.$error.required" style="color:red; font-size: 10px"">Campo requerido</p>  
-                    </div>
-                    <div class="col-md-4">
-                        <label for="">Fecha de término: </label>
-                        <p><input type="date" class="" name="fecFinAplicacion" style="width:120px;height:30px" type="date" id="datetimepicker3" ng-model="itemproject.proyecto.fecFinAplicacion" required></p>
-                        <p ng-show="proyectoItem.fecFinAplicacion.$error.required" style="color:red; font-size: 10px"">Campo requerido</p>    
-                    </div>
-                    <div class="col-md-4">
-                        <label for="">Días: </label>
-                        <p><input type="number" style= "width:100px;height:30px" class="" name="diasProyecto"  ng-minlength="1" ng-maxlength="2" ng-model="itemproject´.proyecto.diasProyecto" required></p>
-                        <!--<p ng-show="proyectoItem.diasProyecto.$error.minlength">La longitud minima es 1 </p>
-                        <p ng-show="proyectoItem.diasProyecto.$error.maxlength">La longitud máxima es 2 </p>-->
-                        <p ng-show="proyectoItem.diasProyecto.$error.required" style="color:red; font-size: 10px"">Campo requerido</p> 
-                    </div>
-                </div>
-            </div>
-        </div>    
-        <div class="row p-t-20 well white">
-            <div class="row">
-                <div class="col-md-6 ">
-                    <label>Población objetivo</label>
-                    <select class="form-control"
-                    class="form-control" ng-model="itemproject.proyecto.listPoblaciones" 
-                    ng-options="item as item.descPoblacion for item in itemproject.catalogos.listPoblaciones">
-                    <option value="" >-Seleccionar-</option>
-                    </select>
-                </div>
-                <div class="col-md-6 ">
-                    <label>Nivel educativo</label>
-                    <select class="form-control" 
-                    ng-model="itemproject.proyecto.listNivelesEdu" 
-                    ng-disable="!itemproject.proyecto.listNivelesEdu" 
-                    ng-options="item as item.descNiveledu for item in itemproject.catalogos.listNivelesEdu">
-                        <option value="" >Seleccionar</option>
-                    </select>
-                </div>
-            </div>     
-            <div class="form-group filled">
-                <div class="row p-t-20">
-                    <div class="col-md-6 ">
-                        <label>Grado/Semestre</label>
-                        <select class="form-control">
-                            <option value="0">Seleccionar</option>
-                            <option value="1">Grado/Semestre 1</option>
-                            <option value="2">Grado/Semestre 2</option>
-                            <option value="3">Grado/Semestre 3</option>
-                            <option value="4">Grado/Semestre 4</option>
-                            <option value="5">Grado/Semestre 5</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6 ">
-                        <label >Asignatura</label>
-                        <select class="form-control">
-                            <option value="0">Seleccionar</option>
-                            <option value="1">Asignatura 1</option>
-                            <option value="2">Asignatura 2</option>
-                            <option value="3">Asignatura 3</option>
-                            <option value="4">Asignatura 4</option>
-                            <option value="5">Asignatura 5</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group pull-right">
-                <button type="submit" class="btn btn-success boton" href="">Agregar</button>
-            </div>
-            <div class="datatables">
-                <table datatable="" class="table table-full table-full-small" cellspacing="0" width="100%">
-                    <thead>
-                        <tr>
-                            <th>Población objetivo</th>
-                            <th>Nivel educativo</th>
-                            <th>Grado/Semestre</th>
-                            <th>Asignatura</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Población objetivo 1</td>
-                            <td>Nivel educativo 1</td>
-                            <td>Grado/Semestre 1</td>
-                            <td>Asignatura 1</td>
-                            <td><button type="button" class="btn btn-xs btn-danger btn-round"><i class="md md-delete"></i></button></td>
-                        </tr>
-                
-                    </tbody>
-                </table>
-            </div>                
-        </div>
-        <div class="row well white">
-            <div class="form-group">
-                <label for="textArea" >Comentarios</label>
-                <textarea class="form-control vertical" rows="1" id="textArea" ng-model="itemproject.proyecto.comentarios"></textarea>
-            </div>
-            <div class="form-group pull-right">
-                <button type="submit" class="btn btn-success boton" href="">Crear</button>
-                <button type="reset" class="btn btn-default">Cancelar</button>
-            </div>
-        </div>
-        </fieldset>
-        </form>
 </section>
-</div>
-
-
