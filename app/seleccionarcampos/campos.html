@@ -1,168 +1,132 @@
-<div class="main-content">
-<section>
-	<div class="page-header">
-		<h1>
-            <i class="md md-insert-chart"></i> Seleccionar campos
-        </h1>
-	</div>
-	<div class="row well white">
-		<h4 class="p-l-20">Proyecto: Evaluación de la Oferta Educativa: Preescolar</h4>
-    <br><br>
-  	<br>
-    <div class="col-md-4 form-group">
-      <h5 class="p-l-20">Nombre: <input type="text"></h5>
+<section class="p-b-20">
+    <div class="page-header">
+        <h1><i class="md md-done-all"></i> Selección de campos para la muestra NOMBRE DE LA MUESTRA</h1>
+        <p class="lead">Proyecto NOMBRE DEL PROYECTO</p>
     </div>
-    <div class="col-md-4">
-      <div class="row">   
-        <div class="form-group">
-          <label class="col-md-6 control-label">Municipio</label>
-            <div class="col-md-6">
-              <div class="switch">
-                <label>
-                  <input type="checkbox">
-                  <span class="lever"></span>
-                </label>
-              </div>
+    <div class="row m-b-40">
+        <div class="col-md-2 col-md-push-10">
+            <p><i class="md md-done"></i> <a href="#/seleccionarcampos/campos">Seleccionar campos</a></p>
+            <p><a href="#/figurasoperativas/figurasoperativas">Figuras Operativas</a></p>
+            <p><a href="#/fases/fases">Fases</a></p>
+            <p><a href="#/parametros/parametros">Parametros</a></p>
+            <p><a href="#/cronogramaDGLPD/cronogramaDGLPD">Cronograma DGLPD</a></p>
+            <p><a href="#/cronogramaDINEE/cronogramaDINEE">Cronograma DINEE</a></p>
+        </div>
+        <div class="col-md-10 col-md-pull-2">
+            <div class="col-md-4">
+                <div class="well white">
+                    <form class="form-floating ng-pristine ng-valid">
+                        <fieldset>
+                            <legend>Configuración de campos</legend>
+                            <div class="form-group">
+                                <label for="inputEmail" class="control-label">Nombre de la tabla</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="row p-r-15">
+                                <div class="form-group">
+                                    <p class="col-xs-6 pull-left">Municipio</p>
+                                    <div class="switch">
+                                        <label class="filled">
+                                            <input checked="checked" type="checkbox">
+                                            <span class="lever"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="col-xs-6 pull-left">Localidad</p>
+                                    <div class="switch">
+                                        <label class="filled">
+                                            <input checked="checked" type="checkbox">
+                                            <span class="lever"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="col-xs-6 pull-left">Escuelas</p>
+                                    <div class="switch">
+                                        <label class="filled">
+                                            <input checked="checked" type="checkbox">
+                                            <span class="lever"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="col-xs-6 pull-left">Sostenimiento</p>
+                                    <div class="switch">
+                                        <label class="filled">
+                                            <input type="checkbox">
+                                            <span class="lever"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">Limpiar</button>
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="well white">
+                    <script>
+                    $(function() {
+                        $("#sortable").sortable();
+                        $("#sortable").disableSelection();
+                    });
+                    </script>
+                    <div class="card">
+                        <ul class="list-group" id="sortable">
+                            <li class="list-group-item">
+                                <div class="list-actions">
+                                    <a href="" class="btn btn-link"><i class="md md-close"></i></a>
+                                </div>
+                                <i class="md md-menu"></i> Municipio
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-actions">
+                                    <a href="" class="btn btn-link"><i class="md md-close"></i></a>
+                                </div>
+                                <i class="md md-menu"></i> Localidad
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-actions">
+                                    <a href="" class="btn btn-link"><i class="md md-close"></i></a>
+                                </div>
+                                <i class="md md-menu"></i> Escuelas
+                            </li>
+                        </ul>
+                    </div>
+                    <div class=" row p-t-20">
+                        <div class="col-md-12 text-right p-t-20">
+                            <button type="submit" class="btn btn-border btn-success">Vista previa</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="well white">
+                    <div class="table-responsive white">
+                        <h3 class="table-title p-20">Vista previa</h3>
+                        <table class="table table-hover table-full table-full-small">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Municipio</th>
+                                    <th class="text-center">Localidad</th>
+                                    <th class="text-center">Escuelas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Municipio 1</td>
+                                    <td>Localidad 1</td>
+                                    <td>Escuela 1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="form-group">
-        <label class="col-md-6 control-label">Localidad</label>
-          <div class="col-md-6">
-            <div class="switch">
-              <label>
-                <input type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">    
-        <div class="form-group">
-        <label class="col-md-6 control-label">Escuelas</label>
-          <div class="col-md-6">
-            <div class="switch">
-              <label>
-                <input type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="form-group">
-          <label class="col-md-6 control-label">Sostenimiento</label>
-            <div class="col-md-6">
-              <div class="switch">
-                <label>
-                  <input type="checkbox">
-                  <span class="lever"></span>
-                </label>
-              </div>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-      <div class="form-group">
-        <label class="col-md-6 control-label">Total Nacional</label>
-          <div class="col-md-6">
-            <div class="switch">
-              <label>
-                <input type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="form-group">
-        <label class="col-md-6 control-label">Latitud</label>
-          <div class="col-md-6">
-            <div class="switch">
-              <label>
-                <input type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-      <div class="form-group">
-        <label class="col-md-6 control-label">Longitud</label>
-          <div class="col-md-6">
-            <div class="switch">
-              <label>
-                <input type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="form-group">
-          <label class="col-md-6 control-label">Nombre del CCT</label>
-            <div class="col-md-6">
-              <div class="switch">
-                <label>
-                  <input type="checkbox">
-                  <span class="lever"></span>
-                </label>
-              </div>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6"></div>
-          <div class="col-md-6 p-t-20">
-            <button type="submit" class="btn btn-primary">Agregar</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="row">
-          <div class="col-md-10 well">
-            <style>
-            #sortable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
-            #sortable li { margin: 0 3px 5px 5px; }
-            #sortable li span { position: absolute; margin-left: -1.3em; }
-            </style>
-            <script>
-              $( function() {
-                $( "#sortable" ).sortable();
-                $( "#sortable" ).disableSelection();
-              } );
-              </script>
-              <ul id="sortable">
-                <li class="ui-state-default indigo lighten-4"><i class="md md-vertical-align-center"></i> Item 1</li>
-                <li class="ui-state-default indigo lighten-4"><i class="md md-vertical-align-center"></i> Item 2</li>
-                <li class="ui-state-default indigo lighten-4"><i class="md md-vertical-align-center"></i> Item 3</li>
-                <li class="ui-state-default indigo lighten-4"><i class="md md-vertical-align-center"></i> Item 4</li>
-                <li class="ui-state-default indigo lighten-4"><i class="md md-vertical-align-center"></i> Item 5</li>
-                <li class="ui-state-default indigo lighten-4"><i class="md md-vertical-align-center"></i> Item 6</li>
-                <li class="ui-state-default indigo lighten-4"><i class="md md-vertical-align-center"></i> Item 7</li>
-              </ul>
-                <div class=" row p-t-20">
-                  <div class="col-md-12 text-right p-t-20">
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                  </div>
-                </div>  
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-      </div>
-      <div class=" row p-t-20">
-        <div class="col-md-12 text-right p-t-80">
-          <button type="submit" class="btn btn-primary">Siguiente</button>
-        </div>
-     </div>
-  </div>
-</section>	
-</div>
-
-
+    </div>
+</section>

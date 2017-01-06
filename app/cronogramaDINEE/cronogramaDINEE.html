@@ -1,139 +1,124 @@
-<div class="main-content">
-<section>
-	<div class="page-header">
-		<h1>
-            <i class="md md-insert-chart"></i> Cronograma DINEE
-        </h1>
-	</div>
-     <div class="forms-advanced row" id="datepickers">
-        <div class=" col-md- 12 text-right">
-             <label>Clave del proyecto (autoasignada): PSIPSCO0001</label>
-        </div>
+<section class="p-b-20">
+    <div class="page-header">
+        <h1><i class="md md-done-all"></i> Cronograma DINEE para la muestra NOMBRE DE LA MUESTRA</h1>
+        <p class="lead">Proyecto NOMBRE DEL PROYECTO</p>
+        <p class="lead">Fecha de aplicación del proyecto: 11/22/33 - 44/55/66</p>
     </div>
-    <div class="row well white">          
-        <div class="row">
-            <div class="col-md-8">
-                <h4 class="">Proyecto: Evaluación de la Oferta Educativa: Preescolar</h4>
-            </div>
-            <div class="col-md-4 text-right">
-                <h5>Muestra 1/3</h5> 
+    <div class="row m-b-40">
+        <div class="col-md-2 col-md-push-10">
+            <p><i class="md md-done"></i> <a href="#/seleccionarcampos/campos">Seleccionar campos</a></p>
+            <p><i class="md md-done"></i> <a href="#/figurasoperativas/figurasoperativas">Figuras Operativas</a></p>
+            <p><i class="md md-done"></i> <a href="#/fases/fases">Fases</a></p>
+            <p><i class="md md-done"></i> <a href="#/parametros/parametros">Parametros</a></p>
+            <p><i class="md md-done"></i> <a href="#/cronogramaDGLPD/cronogramaDGLPD">Cronograma DGLPD</a></p>
+            <p><i class="md md-done"></i> <a href="#/cronogramaDINEE/cronogramaDINEE">Cronograma DINEE</a></p>
+        </div>
+        <div class="col-md-10 col-md-pull-2">
+            <div class="well white">
+                <div class="table-responsive white">
+                    <table class="table table-hover table-full table-full-small">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Consecutivo</th>
+                                <th class="text-center">Actividad</th>
+                                <th class="text-center">Fecha de inicio</th>
+                                <th class="text-center">Fecha de término</th>
+                                <th class="text-center">Descripción</th>
+                                <th class="text-center">Responsable</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Entregable</th>
+                                <th class="text-center">Fecha del entregable</th>
+                                <th class="text-center">Extemporaneo</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td class="text-center">Actividad 1</td>
+                                <td class="text-center">11/22/33</td>
+                                <td class="text-center">44/55/66</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et nunc in nulla vulputate vulputate. Vivamus viverra lectus quis pulvinar facilisis. Nulla ultrices fringilla massa, a venenatis turpis tincidunt quis. Morbi ac posuere turpis.</td>
+                                <td class="text-center">Responsable 1</td>
+                                <td class="text-center">Status 1</td>
+                                <td class="text-center">Entregable 1</td>
+                                <td class="text-center">77/88/99</td>
+                                <td class="text-center">
+                                    <div class="form-group">
+                                        <div class="switch">
+                                            <label class="filled">
+                                                <input checked="checked" type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="submit" class="btn btn-sm btn-info" data-animation="am-fade-and-slide-top" data-template-url="app/cronogramaDINEE/modal-configurar-actividad.html" bs-modal="modal"><i class="md md-settings-applications"></i></button>
+                                    <button type="submit" class="btn btn-sm btn-info" data-animation="am-fade-and-slide-top" data-template-url="app/cronogramaDINEE/modal-configurar-subactividad.html" bs-modal="modal"><i class="md md-playlist-add"></i></button>
+                                    <button type="submit" class="btn btn-sm btn-danger"><i class="md md-delete"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="grey lighten-5">
+                                <td class="text-center">1.1</td>
+                                <td class="text-center">Sub actividad 1</td>
+                                <td class="text-center">11/22/33</td>
+                                <td class="text-center">44/55/66</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et nunc in nulla vulputate vulputate. Vivamus viverra lectus quis pulvinar facilisis. Nulla ultrices fringilla massa, a venenatis turpis tincidunt quis. Morbi ac posuere turpis.</td>
+                                <td class="text-center">Responsable 1</td>
+                                <td class="text-center">Status 1</td>
+                                <td class="text-center">Entregable 1</td>
+                                <td class="text-center">77/88/99</td>
+                                <td class="text-center">
+                                    <div class="form-group">
+                                        <div class="switch">
+                                            <label class="filled">
+                                                <input checked="checked" type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="submit" class="btn btn-sm btn-info" data-animation="am-fade-and-slide-top" data-template-url="app/cronogramaDINEE/modal-configurar-subactividad.html" bs-modal="modal"><i class="md md-playlist-add"></i></button>
+                                    <button type="submit" class="btn btn-sm btn-danger"><i class="md md-delete"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td class="text-center">Actividad 2</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">-</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et nunc in nulla vulputate vulputate. Vivamus viverra lectus quis pulvinar facilisis. Nulla ultrices fringilla massa, a venenatis turpis tincidunt quis. Morbi ac posuere turpis.</td>
+                                <td class="text-center">Responsable 2</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">Entregable 2</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">
+                                    <div class="form-group">
+                                        <div class="switch">
+                                            <label class="filled">
+                                                <input type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>  
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="submit" class="btn btn-sm btn-warning" data-animation="am-fade-and-slide-top" data-template-url="app/cronogramaDINEE/modal-configurar-actividad.html" bs-modal="modal"><i class="md md-settings-applications"></i></button>
+                                    <button type="submit" class="btn btn-sm btn-info" data-animation="am-fade-and-slide-top" data-template-url="app/cronogramaDINEE/modal-configurar-subactividad.html" bs-modal="modal"><i class="md md-playlist-add"></i></button>
+                                    <button type="submit" class="btn btn-sm btn-danger"><i class="md md-delete"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-action clearfix p-t-15">
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <h2 class="text-center">Cronograma DINEE</h2>
-        <div class="text-right col-md-12">
-            <i class="md md-poll f30"></i> 
-        </div> 
-        <br>
-        <form>
-        <table class="table table-bordered table-full table-full-small text-center" style="font-size: 12px">
-            <colgroup>
-              <col class="auto-cell-size "/>
-            </colgroup>
-            <thead>
-                <tr style="background-color: #141B4D; color:white;">
-                    <td rowspan=3 >Consecutivo</td>
-                    <td>Programa</td>
-                    <td colspan=7>Descripción del Programa</td>
-                    <td colspan="1">Fecha de aplicación  </td>  
-                    <td rowspan="3">Acción</td>
-                </tr>
-                <tr class="light-blue darken-4">
-                    <td>Evaluación de la Oferta Educativa</td>
-                    <td colspan=7>Aplicación Nacional de la Oferta Educativa Nacional saxdasjfsaj</td>
-                    <td >10 al 29 de mayo</td>
-                </tr>
-                <tr class="grey base">
-                    <td>Actividad</td>
-                    <td>Fecha de Inicio</td>
-                    <td>Fecha de Término</td>
-                    <td>Descripción</td>
-                    <td>Responsable</td>
-                    <td class="indigo lighten-2">Cancelado</td>
-                    <td class="indigo lighten-4">Proceso</td>
-                    <td class="blue lighten-2">Concluido</td>
-                    <td class="blue lighten-2">Entregable</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Actividad 1</td>
-                    <td>10-10-2016</td>
-                    <td>12-11-2017</td>
-                    <td>Act 1</td>
-                    <td>DGLPD</td>
-                    <td></td>
-                    <td><i class="md md-done"></td>
-                    <td></td>
-                    <td>Descargar PDF</td>
-                    <td><i class="md md-add-circle f20" type="button" data-toggle="modal" data-target="#gridSystemModal"></i> <i class="md md-remove-circle f20"></i></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="col-md-12 text-right p-t-80">
-            <button type="submit" class="btn btn-success boton" href="">Siguiente</button>
-        </div>
-        </form>
     </div>
 </section>
-</div>
-<!-- Modal agregar Subactividad-->
-<div id="gridSystemModal" class="modal fade"  aria-labelledby="gridModalLabel" >
-    <div class="modal-dialog" >
-        <div class="modal-content col-md-12 col-md-offset-3">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="gridModalLabel">Agregar actividades</h4>
-            </div>
-            <div class="modal-body">  
-                <div class="row form-group">
-                    <form action="" class="form-floating" name="proyectoItem" method="post" ng-submit="itemproject.submitProject($event, proyectoItem)" novalidate>
-                    <fieldset>
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label>Subactividad</label>
-                                <p><input type="text"  class="form-control" name="nombreProyecto" ng-minlength="1" ng-maxlength="60"  required></p>
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <label for="">Fecha de inicio: </label>
-                                <span><input type="text" class="form-control" name="fecInicioProyecto" id="datetimepicker1" ng-model="itemproject.datos.fecInicioProyecto" required ng-model="sharedDate" data-autoclose="1" bs-datepicker></span>  
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label for="">Fecha de término: </label>
-                                <span><input type="text" class="form-control" name="fecFinProyecto"  type="text" id="datetimepicker2" ng-model="itemproject.datos.fecFinProyecto" required ng-model="sharedDate" data-autoclose="1" bs-datepicker></span>  
-                            </div>
-                        </div>   
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Descripción del proyecto</label>
-                                    <textarea class="form-control vertical"  name="descripcionProyecto"  id="textArea" ng-model="itemproject.datos.descripcionProyecto"  required></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label for="">Responsable</label>
-                                <p><input type="text"  name="nombreProyecto" class="form-control" ng-minlength="1" ng-maxlength="60"  required></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label for="">Entregable</label>
-                                <p><input type="text"  name="nombreProyecto" class="form-control ng-minlength="1" ng-maxlength="60" required></p>
-                            </div>
-                        </div>
-                    </fieldset>
-                  </form>
-                </div>
-                <br><br>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary"  ng-click="re.guardar()">Guardar cambios</button>
-                </div>
-             </div>
-        </div>
-    </div>
-</div>

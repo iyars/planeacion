@@ -1,64 +1,58 @@
-<section>
+<section class="p-b-20">
     <div class="page-header">
-        <h1>
-            <i class="md md-insert-chart"></i> Agregar fase
-        </h1>
+        <h1><i class="md md-done-all"></i> Figuras operativas para la muestra NOMBRE DE LA MUESTRA</h1>
+        <p class="lead">Proyecto NOMBRE DEL PROYECTO</p>
     </div>
-    <h4 class="p-l-30">Proyecto: Evaluación de la Oferta Educativa: Preescolar</h4>
-    <div class=" col-md- 8 text-right ">
-        <label>Clave del proyecto (autoasignada): PSIPSCO0001</label>
-    </div>
-    <div class="col-md-12 ">
-        <div class="col-md-3">
-            <div class="well white">
-                <form>
-                    <fieldset>
-                        <div class="form-group filled">
-                            <label>Fecha de inicio</label>
-                            <input type="text" class="form-control text-center" ng-model="sharedDate" data-autoclose="1" bs-datepicker>
-                        </div>
-                        <div class="form-group">
-                            <label>Fecha de término</label>
-                            <input type="text" class="form-control text-center" ng-model="sharedDate" data-autoclose="1" bs-datepicker>
-                        </div>
-                        <div class="form-group">
-                            <label>Nombre de la fase</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <br>
-                        <div class="form-group pull-right">
-                            <input type="submit" class="btn btn-default" ng-click="re.limpiar()" value="Limpiar">
-                            <input type="submit" class="btn btn-primary" value="Agregar">
-                            <input type="submit" class="btn btn-primary" value="Agregar" ng-show="re.carreraGenerica != null && re.aniosConcluidos != null && re.nivelMaximo !=null && carrera2 != null " ng-click="re.agregarEstudios()">
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
+    <div class="row m-b-40">
+        <div class="col-md-2 col-md-push-10">
+            <p><i class="md md-done"></i> <a href="#/seleccionarcampos/campos">Seleccionar campos</a></p>
+            <p><i class="md md-done"></i> <a href="#/figurasoperativas/figurasoperativas">Figuras Operativas</a></p>
+            <p><i class="md md-done"></i> <a href="#/fases/fases">Fases</a></p>
+            <p><a href="#/parametros/parametros">Parametros</a></p>
+            <p><a href="#/cronogramaDGLPD/cronogramaDGLPD">Cronograma DGLPD</a></p>
+            <p><a href="#/cronogramaDINEE/cronogramaDINEE">Cronograma DINEE</a></p>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-10 col-md-pull-2">
             <div class="well white">
-                <div class="datatables">
-                    <table class="table table-full table-full-small" cellspacing="0" width="100%">
+                <div class="table-responsive white">
+                    <table class="table table-hover table-full table-full-small">
                         <thead>
                             <tr>
+                                <th class="text-center">Jerarquia objetivo</th>
+                                <th class="text-center">Fase</th>
                                 <th class="text-center">Fecha de inicio</th>
                                 <th class="text-center">Fecha de término</th>
-                                <th class="text-center">Nombre de la fase</th>
+                                <th class="text-center">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="expList in re.estudiosLista">
-                                <td class="text-center">{{expList.nivelEstudio}}</td>
-                                <td class="text-center">{{expList.carrera}}</td>
-                                <td class="text-center">{{expList.anios}}</td>
+                            <tr>
+                                <td class="text-center">Jerarquia 1</td>
+                                <td class="text-center">Nombre de la fase</td>
+                                <td class="text-center">11/22/33</td>
+                                <td class="text-center">44/55/66</td>
+                                <td class="text-center">
+                                    <button type="submit" class="btn btn-sm btn-info" data-animation="am-fade-and-slide-top" data-template-url="app/fases/modal-configurar-fases.html" bs-modal="modal"><i class="md md-settings-applications"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Jerarquia 2</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">
+                                    <button type="submit" class="btn btn-sm btn-warning" data-animation="am-fade-and-slide-top" data-template-url="app/fases/modal-configurar-fases.html" bs-modal="modal"><i class="md md-settings-applications"></i></button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="form-group p-t-20 text-right" ng-cloak>
-                    <button type="submit" class="btn btn-primary" ng-click="re.guardar()">Siguiente</button>
+                <div class="card-action clearfix p-t-15">
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>

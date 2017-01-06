@@ -1,59 +1,56 @@
-<div class="main-content" ng-controller="MuestraController as itemMuestra">
-<section>
-	<div class="page-header">
-		<h1>
-      <i class="md md-insert-chart"></i> Cargar muestra 
-    </h1>
-	</div>
-	<div class="well white">
-		<div class="row p-l-40"> 
-  		<h4>Proyecto: Evaluación de la Oferta Educativa: Preescolar</h4>
-  		<br><br>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <table class="table table-bordered table-full table-full-small text-center">
-            <tbody>
-                <tr class="well">
-                <td></td>
-                  <td>Nombre de archivo</td>
-                  <td>Acción</td>
-                </tr> 
-                <tr class="text-center">
-                  <td>
-                      <i class="md md-archive f30" type="button" data-toggle="modal" data-target="#gridCargaExcel"></i>
-                  </td>
-                  <td></td>
-                  <td>
-                     <button class="btn btn-primary btn-xs">Seleccionar campos</button> 
-                     <button class="btn btn-danger btn-xs m-l-20"><i class=" md md-delete  "></i></button> 
-                  </td>
-                </tr>
-            </tbody>
-          </table>
+<section class="p-b-20">
+    <div class="page-header">
+        <h1><i class="md md-done-all"></i> Muestras para el proyecto NOMBRE DEL PROYECTO</h1>
+        <p class="lead">A continuación podrás cargar una muestra o ver el listado de muestras existentes</p>
+    </div>
+    <div class="row m-b-40">
+        <div class="col-md-3 col-md-push-9">
         </div>
-      </div>
-	  </div>
-  </div>
-</section>	
-</div>
-
-<!-- Cargar excel -->
-<div id="gridCargaExcel" class="modal fade" my-modal aria-labelledby="gridModalLabel" ng-init="" ng-controller="MuestraController as muestrctrl">
-<section>
-    <div class="modal-dialog" >
-        <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="gridModalLabel">Cargar excel</h4>
-          </div>
-            <div class="modal-body">
-               <input type="file" class="text-left" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" file-model="muestrctrl.archivoExcel">
-               <button ng-click="muestrctrl.subirExcel()" class="btn btn-success boton">Cargar</button>
-               {{muestrctrl.archivoExcel}}
+        <div class="col-md-9 col-md-pull-3">
+            <div class="well white">
+                <table class="table table-hover table-full table-full-small">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Muestra</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet</td>
+                            <td class="text-center">
+                                <a href="#/seleccionarcampos/campos"><button type="button" class="btn btn-info btn-sm" data-placement="bottom" data-title="Seleccionar campos" bs-tooltip=""><i class="md md-settings-applications"></i>
+                                </button></a>
+                                <button class="btn btn-danger btn-sm" data-placement="bottom" data-title="Eliminar muestra" bs-tooltip=""><i class="md md-delete"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet</td>
+                            <td class="text-center">
+                                <a href="#/seleccionarcampos/campos"><button type="button" class="btn btn-warning btn-sm" data-placement="bottom" data-title="Seleccionar campos" bs-tooltip=""><i class="md md-settings-applications"></i>
+                                </button></a>
+                                <button class="btn btn-danger btn-sm" data-placement="bottom" data-title="Eliminar muestra" bs-tooltip=""><i class="md md-delete"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card-action clearfix">
+                    <ul class="pager">
+                        <li>
+                            <button class="btn btn-default btn-flat-border pull-left grey lighten-2">Anterior</button>
+                            <button class="btn btn-default btn-flat-border pull-right grey lighten-2"> Siguiente</button>
+                        </li>
+                        <li>
+                            <p class="pager-number">Mostrando del 1 al 10 de 50 resultados</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-action clearfix p-t-15">
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-border btn-success" data-animation="am-fade-and-slide-top" data-template-url="app/muestra/modal-cargar.html" bs-modal="modal">Agregar muestra</button>
+                    </div>
+                </div>
             </div>
-            <!--div class="modal-footer">
-            </div-->
         </div>
     </div>
 </section>
-</div>

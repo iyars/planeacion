@@ -1,0 +1,23 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Cargar muestra</h4>
+                </div>
+                <div class="modal-body">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="control-label">Selecciona un archivo de Excel (.xls)</label>
+                            <input type="file" ngf-select ng-model="files" name="file" accept="image/*" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="$hide()">Cerrar</button>
+                    <button type="button" class="btn btn-primary" ng-click="$hide()">Cargar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

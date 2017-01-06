@@ -1,0 +1,36 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-floating">
+                <div class="modal-header">
+                    <h4 class="modal-title">Configurar fase</h4>
+                </div>
+                <div class="modal-body text-left">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="inputEmail" class="control-label">Nombre</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1"><i class="md md-event-available"></i></span>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input class="form-control ng-pristine ng-valid ng-empty ng-touched" ng-model="fromDate" data-max-date="" placeholder="Fecha de inicio" bs-datepicker="" value="Sit amet, porttitor eget dolor morbi non arcu risus, quis." style="" type="text">
+                                    </div>
+                                    <div class="col-md-6 filled">
+                                        <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="untilDate" data-min-date="" placeholder="Fecha de término" bs-datepicker="" value="At varius vel, pharetra vel turpis nunc." type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="$hide()">Cerrar</button>
+                    <button type="button" class="btn btn-primary" ng-click="$hide()">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

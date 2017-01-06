@@ -1,0 +1,59 @@
+<section>
+    <div class="page-header">
+        <h1><i class="md md-insert-chart"></i> Listado de muestras - Proyecto - Evaluación de la Oferta Educativa: Preescolar</h1>
+        <p class="lead">Clave del proyecto (autoasignada): PSIPSCO0001</p>
+    </div>
+    <div class="row m-b-40">
+        <div class="col-lg-3">
+            <div class="well white">
+                <form class="form-floating ng-pristine ng-valid" name="formularioEstudios" ng-submit="re.agregarEstudios()" novalidate="novalidate">
+                    <fieldset>
+                    <label>Carga un archivo Excel (.xls)</label>
+                        <div class="form-group filled">
+                            <input type="file" class="text-left" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" file-model="muestrctrl.archivoExcel"> 
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-primary" value="Cargar" type="submit" ng-click="muestrctrl.subirExcel()">
+                             {{muestrctrl.archivoExcel}}
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="well white">
+                <div class="table-responsive white">
+                    <h3 class="table-title p-20">Lista de muestras</h3><table class="table table-hover table-full table-full-small">
+                        
+                        <thead>
+                            <tr>
+                                <th class="text-center">Nombre de la muestra</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, ipsum in egestas tincidunt, lectus ligula rutrum or.</td>
+                                <td class="text-center">
+                                    <a href="">
+                                        <button type="button" class="btn btn-info btn-sm ng-scope" data-placement="bottom" data-title="Seleccionar campos" bs-tooltip=""><i class="md md-done-all"></i>
+                                            <div class="ripple-wrapper"></div>
+                                        </button>
+                                    </a>
+                                    <a href="">
+                                        <button type="button" class="btn btn-sm btn-danger ng-scope" data-placement="bottom" data-title="Eliminar muestra" bs-tooltip=""><i class="md md-delete"></i>
+                                        <div class="ripple-wrapper"></div>
+                                    </button>
+                                    </a>
+                                   
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
